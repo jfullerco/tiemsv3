@@ -3,10 +3,7 @@ import {useParams} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import {Link} from 'react-router-dom'
 import SiteList from '../comp/SiteList'
-
-import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
-import {Button} from 'react-bootstrap/Button'
+import AssetList from '../comp/AssetList'
 
 
 const ClientDetail = (props) => {
@@ -51,36 +48,11 @@ const ClientDetail = (props) => {
 
       <div className="container">
         <SiteList style="order: 1" />
-        <SiteList style="order: 2" />
+        <AssetList style="order: 2" />
       </div>
 
       <p />
-        <Accordion > 
-          <Card>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              <Card.Header>Assets</Card.Header>
-            </Accordion.Toggle>
-            <Accordion.Collapse eventKey="0">
-              <Card.Body>
-                {assets ? (
-                  assets.map(asset => (
-                    <ul>
-                      <Link 
-                        to={`/assets/${asset._id}`} 
-                        key={asset._id}>
-                      {asset.assetID} - 
-                      {asset.siteName}
-                      </Link>
-                    
-                    </ul>
-                  ))
-                ):(
-                  "No Assets"
-                  )}
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        </Accordion>
+       
             
     </div>
   )

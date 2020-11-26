@@ -29,18 +29,23 @@ const retrieveClient = (id) => {
 return (
   
     <div className="widget">
-    {sites ? (
-              sites.map(site => (
-                <ul>
-                  <Link to={`/sites/${site._id}`} key="site._id">
-                    {site.site_name} 
-                  </Link>
-                </ul>
-              ))
-            ):(
-          "No Sites"
-            )
-    }
+     <table>
+      <th>Sites</th>
+      <tr>
+        {sites ? (
+                sites.map(site => (
+                  <ul>
+                    <Link to={`/sites/${site._id}`} key="site._id">
+                      {site.site_name} 
+                    </Link>
+                  </ul>
+                ))
+              ):(
+            "No Sites"
+              )
+        }
+    </tr>
+    </table>
     </div>
 
   

@@ -53,12 +53,21 @@ td {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-flow: wrap;
   
 }
 
 .widget {
   flex: 30%;
+  flex-basis: auto;
+ 
+  height: 200px;
+  overflow: scroll;
   border: 2px solid;
   border-style: groove;
   border-radius: .25em;
+}
+
+.main-contain {
+  margin: 10px;
 }

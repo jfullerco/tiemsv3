@@ -42,11 +42,8 @@ function App() {
       
       </div>
       
-      
+      <div className="main-contain">
       <Switch>
-      
-        
-        
           <Route exact path="/">TIEMS Home</Route>
 
           <Route exact path="/clients" component={ClientDashboard} />
@@ -67,12 +64,9 @@ function App() {
           <Route path='/addAsset/:id' component={AddAsset} />
 
           <Route path='/admin' component={ClientAdmin} />
-        
-        
-
-     
       </Switch>
-      <div className="item">test</div>
+      </div>
+      
      </div>
   );
 }
