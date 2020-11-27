@@ -34,11 +34,11 @@ return (
       <tr>
         {assets ? (
                 assets.map(asset => (
-                  <ul>
+                  <tr>
                     <Link to={`/assets/${asset._id}`} key="asset._id">
                       {asset.assetID} 
                     </Link>
-                  </ul>
+                  </tr>
                 ))
               ):(
             "No Assets"

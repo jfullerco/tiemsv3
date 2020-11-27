@@ -53,63 +53,76 @@ const AddAsset = (props) => {
     }
   
   return (
-    <div>
-      <h5>Add Asset</h5>
-        <div className="container">
-
+    <table>
+      <th>Add Asset</th>
+        <tr>
           <input className="assetID" type="text"
             placeholder="Asset ID" 
             value={asset.assetID}
             onChange={handleInputChange}
             name="assetID"
-            /> <p />
+            /> 
+        </tr>
+        <tr>
           <input className="assetType" type="text"
-            placeholder="Asset Type" 
-            value={asset.assetType}
-            onChange={handleInputChange}
-            name="assetType"
-            /> <p />
+              placeholder="Asset Type" 
+              value={asset.assetType}
+              onChange={handleInputChange}
+              name="assetType"
+              />
+        </tr>
+        <tr>
           <input className="assetHostName" type="text"
             placeholder="Host Name"
             value={asset.assetType}
             onChange={handleInputChange}
             name="assetHostName" 
-            /> <p />
+            />
+        </tr>
+        <tr>
           <input className="assetBandwidth" type="text"
             placeholder="Bandwidth" 
             value={asset.assetBandwidth}
             onChange={handleInputChange}
             name="assetBandwidth"
-            /> <p />
+            />
+        </tr>  
+        <tr>
           <input className="assetAccessHandoff" type="text"
             placeholder="Access Handoff" 
             value={asset.assetAccessHandoff}
             onChange={handleInputChange}
             name="assetAccessHandoff"
-            /> <p />
+            />
+        </tr>  
+        <tr>
           <input className="assetVoiceHandoff" type="text"
             placeholder="Voice Handoff" 
             value={asset.assetVoiceHandoff}
             onChange={handleInputChange}
             name="assetVoiceHandoff"
-            /> <p />
+            />
+        </tr>  
+        <tr>
           <input className="assetDetails" type="text-area"
             placeholder="Details" 
             value={asset.assetDetails}
             onChange={handleInputChange}
             name="assetDetails"
-            /> <p />
+            /> 
+        </tr>  
+        <tr>
           <input className="assetStatus" type="text"
             placeholder="Status" 
             value={asset.assetStatus}
             onChange={handleInputChange}
             name="assetStatus"
-            /> <p />
-          
+            />
+        </tr>  
+          <p/>
           <Button onClick={saveAsset} type="submit">submit</Button>
            
-        </div>
-    </div>
+        </table>
   )
 }
 export default AddAsset
