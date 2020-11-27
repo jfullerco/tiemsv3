@@ -104,7 +104,7 @@ const AddAsset = (props) => {
             />
         </tr>  
         <tr>
-          <input className="assetDetails" type="text-area"
+          <input className="assetDetails" type="textarea"
             placeholder="Details" 
             value={asset.assetDetails}
             onChange={handleInputChange}

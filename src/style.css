@@ -17,7 +17,9 @@ td {
   border: 10;
 }
 
-
+input [textarea] {
+  width: 150px;
+}
 
 .navbar {
   background-color: rgb(62, 62, 63);
