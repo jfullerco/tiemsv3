@@ -75,3 +75,22 @@ input [textarea] {
 .main-contain {
   margin: 10px;
 }
+
+.client-list {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+div [client-list] :hover {
+  background-color: rgb(138, 36, 36);
+}
+
+.client-list a {
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+

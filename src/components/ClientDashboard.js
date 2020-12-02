@@ -74,21 +74,18 @@ const ClientDashboard = () => {
           
         </Col>
       </Row>
-      <Row>  
-        <Col xs={4} md={{ span: 4, offset: 1 }}>
+      
           <p/>
-          <ul>
-            <div className="client-list">
+            
               {clients && clients.map((client, index) => (
+                  <div className="client-list">
                   <Link to={`/clients/${client._id}`} key={client._id}>
                     {client.client_name}
                     <br />
                   </Link>
+                  </div>
                 ))}
-            </div>
-          </ul>
-        </Col>
-      </Row>
+            
     </div>
   )
 }
