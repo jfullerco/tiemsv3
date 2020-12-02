@@ -58,7 +58,7 @@ input [textarea] {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-flow: wrap;
-  
+  min-height: 100vh;
 }
 
 .widget {
@@ -74,23 +74,52 @@ input [textarea] {
 
 .main-contain {
   margin: 10px;
+
 }
 
 .client-list {
   width: 200px;
-  padding: 5px;
+  padding: 20px;
   margin: 5px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 
-div [client-list] :hover {
-  background-color: rgb(138, 36, 36);
+.client-list:hover {
+  background-color: lightgray;
 }
 
 .client-list a {
   text-decoration: none;
   font-size: 0.75em;
+  color: darkslategrey
+}
+/* footer */
+.footbar {
+  background-color: rgb(62, 62, 63);
+  box-flex-group: content;
+  padding: 20px;
+}
+
+.footbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-emphasis-color: grey;
+}
+
+.footbar a:hover {
+  color: rgb(36, 35, 35);
+  text-shadow:  rgb(255, 255, 255);
+}
+
+.footbar-link {
+  padding: 20px;
+  
+}
+
+.footbar-link:hover {
+  background-color: rgb(107, 108, 109);
 }
 
 
