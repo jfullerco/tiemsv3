@@ -79,7 +79,7 @@ input [textarea] {
 .main-contain {
   padding: 1.5rem;
   flex: none;
-  height: 85vh;
+  height: 88vh;
   overflow: scroll;
   background-color: white
 }
@@ -102,11 +102,12 @@ input [textarea] {
   font-size: 0.75em;
   color: darkslategrey
 }
+
 /* footer */
+
 .footbar {
   background-color: rgb(62, 62, 63);
   box-flex-group: content;
-  
   flex-grow: 1;
 }
 
