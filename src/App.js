@@ -66,7 +66,9 @@ function App() {
           <Route path='/admin' component={ClientAdmin} />
       </Switch>
       </div>
-      
+        <div className="footbar">
+          
+        </div>  
      </div>
   );
 }
