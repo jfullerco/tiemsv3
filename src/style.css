@@ -36,6 +36,7 @@ input [textarea] {
   color: whitesmoke;
   text-decoration: none;
   text-emphasis-color: grey;
+  font-size: .75em;
 }
 
 .navbar a:hover {
