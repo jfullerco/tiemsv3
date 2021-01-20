@@ -7,7 +7,6 @@ import '../style.css'
 function OrderList(props) {
   const {id} = useParams()
   const [orders, setOrders] = useState([])
-  console.log(orders)
 
   useEffect(() => {
     retrieveClient(id)
@@ -16,13 +15,10 @@ function OrderList(props) {
 const retrieveClient = (id) => {
     RestDBService.getClient(id)
     .then(res => {
-      
       setOrders(res.data.orders)
-      
-      console.log()
     })
     .catch(e => {
-      console.log()
+      
     })
   }
 

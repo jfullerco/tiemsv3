@@ -9,7 +9,8 @@ import OrderDetail from './components/OrderDetail'
 import TicketDetail from './components/TicketDetail'
 import AddClient from './components/AddClient'
 import SiteDashboard from './components/SiteDashboard'
-import SiteDetail from './components/SiteDetail'
+import SiteList from './modules/SiteList'
+import SiteDetail from './modules/SiteDetail'
 import AssetDetail from './components/AssetDetail'
 import AddAsset from './components/AddAsset'
 import ClientAdmin from './admin/components/ClientAdmin'
@@ -56,8 +57,9 @@ function App() {
           <Route exact path="/tickets" component={TicketDashboard} />
           <Route path='/tickets/:id' component={TicketDetail} />
 
-          <Route exact path="/sites" component={SiteDashboard} />
-          <Route path="/sites/:id" component={SiteDetail} />
+          <Route exact path="/sites" component={SiteList} />
+          <Route path="/sites/:id" component={SiteList} />
+          <Route path="/sites/detail/:id" component={SiteDetail} />
 
           
           <Route path="/assets/:id" component={AssetDetail} />

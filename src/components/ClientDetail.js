@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import {Link} from 'react-router-dom'
-import SiteList from '../modules/SiteList'
+import SiteCount from '../modules/SiteCount'
 import AssetList from '../modules/AssetList'
 import OrderList from '../modules/OrderList'
 
@@ -25,7 +25,7 @@ const ClientDetail = (props) => {
       setClient(res.data)
       setSites(res.data.sites)
       setAssets(res.data.assets)
-      console.log()
+      
     })
     .catch(e => {
       console.log()
@@ -48,7 +48,7 @@ const ClientDetail = (props) => {
       <h5>{client.client_name}</h5>
 
       <div className="container">
-        <SiteList style="order: 1" />
+        <SiteCount style="order: 1" />
         <AssetList style="order: 2" />
         <OrderList style="order: 3" />
       </div>

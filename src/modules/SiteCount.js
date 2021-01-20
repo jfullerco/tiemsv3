@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
+import SiteList from './SiteList'
 import '../style.css'
 
-function AssetList(props) {
+function SiteCount(props) {
   const {id} = useParams()
-  const [assets, setAssets] = useState([])
+  const [sites, setSites] = useState([])
 
   useEffect(() => {
     retrieveClient(id)
@@ -15,37 +16,28 @@ function AssetList(props) {
 const retrieveClient = (id) => {
     RestDBService.getClient(id)
     .then(res => {
-      setAssets(res.data.assets)
+      setSites(res.data.sites)
     })
     .catch(e => {
       
     })
   }
+function siteList() {
+  <SiteList />
+}
 
 return (
   
     <div className="widget">
-    <table>
-      <th>Assets</th>
+     <table>
+      <th>Sites</th>
       <tr>
-        {assets ? (
-                assets.map(asset => (
-                  <tr>
-                    <Link to={`/assets/${asset._id}`} key="asset._id">
-                      {asset.assetID} 
-                    </Link>
-                  </tr>
-                ))
-              ):(
-            "No Assets"
-              )
+        {
+         <Link to={`/sites/${id}`}>{sites.length}</Link> 
         }
     </tr>
     </table>
-    
     </div>
-
-  
-)
+  )
 }
-export default AssetList
+export default SiteCount
