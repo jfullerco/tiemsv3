@@ -6,26 +6,26 @@ import '../style.css'
 
 const SiteDetail = (props) => {
 
-  const {id} = useParams()
+  const {sid} = useParams()
+  const [sites, setSites] = useState([])
   const [site, setSite] = useState([])
-  
 
   useEffect(() => {
-      retrieveSite(id)
+      retrieveSite(sid)
     }, []
   )
 
-  const retrieveClient = (id) => {
-    RestDBService.getClient(id)
+  const retrieveSite = (sid) => {
+    RestDBService.getSite(sid)
     .then(res => {
-      setSites(res.data.sites)
+      setSites(res.data)
     })
     .catch(e => {
       
     })
   }
   
-  console.log(site)
+  console.log(sid)
 
   return (
     <div>

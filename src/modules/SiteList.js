@@ -22,7 +22,7 @@ const retrieveClient = (id) => {
       
     })
   }
-
+console.log(sites)
 return (
   
     <div>
@@ -31,8 +31,8 @@ return (
       <tr>
         {sites ? (
                 sites.map(site => (
-                  <div className="site-list">
-                    <Link to={`/sites/details/${site._id}`} key="site._id">
+                  <div className="site-list" key={site._id}>
+                    <Link to={`/client/${id}/site/${site._id}`}>
                       {site.site_name} 
                     </Link>
                   </div>

@@ -60,7 +60,7 @@ function App() {
 
           <Route exact path="/sites" component={SiteCount} />
           <Route path="/sites/:id" component={SiteList} />
-          <Route path="/sites/details/:id" component={SiteDetail} />
+          <Route path="/client/:id/site/:sid" component={SiteDetail} />
 
           
           <Route path="/assets/:id" component={AssetDetail} />
