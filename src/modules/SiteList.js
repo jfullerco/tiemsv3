@@ -32,7 +32,7 @@ return (
         {sites ? (
                 sites.map(site => (
                   <div className="site-list">
-                    <Link to={`/sites/detail/${site._id}`} key="site._id">
+                    <Link to={`/sites/details/${site._id}`} key="site._id">
                       {site.site_name} 
                     </Link>
                   </div>

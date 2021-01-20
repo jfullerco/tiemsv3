@@ -9,6 +9,7 @@ import OrderDetail from './components/OrderDetail'
 import TicketDetail from './components/TicketDetail'
 import AddClient from './components/AddClient'
 import SiteDashboard from './components/SiteDashboard'
+import SiteCount from './modules/SiteCount'
 import SiteList from './modules/SiteList'
 import SiteDetail from './modules/SiteDetail'
 import AssetDetail from './components/AssetDetail'
@@ -57,9 +58,9 @@ function App() {
           <Route exact path="/tickets" component={TicketDashboard} />
           <Route path='/tickets/:id' component={TicketDetail} />
 
-          <Route exact path="/sites" component={SiteList} />
+          <Route exact path="/sites" component={SiteCount} />
           <Route path="/sites/:id" component={SiteList} />
-          <Route path="/sites/detail/:id" component={SiteDetail} />
+          <Route path="/sites/details/:id" component={SiteDetail} />
 
           
           <Route path="/assets/:id" component={AssetDetail} />

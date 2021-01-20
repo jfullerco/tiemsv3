@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
-
+import '../style.css'
 
 const SiteDetail = (props) => {
 
@@ -14,16 +15,13 @@ const SiteDetail = (props) => {
     }, []
   )
 
-  const retrieveSite = (id) => {
-    RestDBService.getSite(id)
+  const retrieveClient = (id) => {
+    RestDBService.getClient(id)
     .then(res => {
-      setSite(res.data)
-      setClient(res.data.client)
-      setAssets(res.data.assets)
-      setTickets(res.data.tickets)
+      setSites(res.data.sites)
     })
     .catch(e => {
-      console.log(e)
+      
     })
   }
   
