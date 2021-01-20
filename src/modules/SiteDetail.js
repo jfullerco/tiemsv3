@@ -5,8 +5,8 @@ import RestDBService from '../services/RestDBService'
 import '../style.css'
 
 const SiteDetail = (props) => {
-
-  const {sid} = useParams()
+  
+  const {id, sid} = useParams()
   const [sites, setSites] = useState([])
   const [site, setSite] = useState([])
 
@@ -15,10 +15,10 @@ const SiteDetail = (props) => {
     }, []
   )
 
-  const retrieveSite = (sid) => {
-    RestDBService.getSite(sid)
+  const retrieveSite = (id, sid) => {
+    RestDBService.getSite(id, sid)
     .then(res => {
-      setSites(res.data)
+      setSite(res.data)
     })
     .catch(e => {
       
@@ -26,6 +26,7 @@ const SiteDetail = (props) => {
   }
   
   console.log(sid)
+  console.log(id)
 
   return (
     <div>

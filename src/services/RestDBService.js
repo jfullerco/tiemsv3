@@ -12,8 +12,8 @@ const getAsset = id => {
   return http.get(`/rest/assets/${id}`)
 }
 
-const getSite = (sid) => {
-  return http.get(`/rest/sites/${sid}`)
+const getSite = (id, sid) => {
+  return http.get(`/rest/clients/${id}/sites/${sid}`)
 }
 
 const createClient = data => {
