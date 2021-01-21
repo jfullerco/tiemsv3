@@ -6,12 +6,13 @@ import '../style.css'
 
 const SiteDetail = (props) => {
   
-  const {id, sid} = useParams()
-  const [sites, setSites] = useState([])
+  const {id} = useParams()
+  const {sid} = useParams()
+  
   const [site, setSite] = useState([])
 
   useEffect(() => {
-      retrieveSite(sid)
+      retrieveSite(id, sid)
     }, []
   )
 
@@ -19,18 +20,19 @@ const SiteDetail = (props) => {
     RestDBService.getSite(id, sid)
     .then(res => {
       setSite(res.data)
+      console.log(res.data)
     })
     .catch(e => {
       
     })
   }
   
-  console.log(site)
+  console.log(sid)
   console.log(id)
 
   return (
     <div>
-      <h5></h5>
+      
       Site Name: {site.site_name} <br/>
       Address: {site.site_add1} <br />
       {site.site_add2} <br />

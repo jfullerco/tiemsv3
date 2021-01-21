@@ -33,7 +33,7 @@ return (
       <th>Sites</th>
       <tr>
         {
-         <Link to={`/client/${id}/sites`}>{sites.length}</Link> 
+         <Link to={`/client/${id}/siteList`}>{sites.length}</Link> 
         }
     </tr>
     </table>
