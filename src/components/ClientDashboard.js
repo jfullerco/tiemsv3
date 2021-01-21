@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import RestDBService from '../services/RestDBService'
 import { Link } from 'react-router-dom'
-import {Row, Col, Container} from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
 
 const ClientDashboard = () => {
   
@@ -55,27 +53,22 @@ const ClientDashboard = () => {
   
   return (
     <div>   
-      <Row>
-        <Col xs={4} md={{ span: 4, offset: 1 }}>
-          <Link to="/addClient">Add</Link>
-          <input 
-            type="text"
-            className="form-control"
-            placeholder="client name"
-            value={searchClient}
-            onChange={onChangeSearchClient}
-          /> 
-          <button
-            type="button"
-            onClick={findClient}>
-            Search
-          </button>
-          <p/>
+          <div className="sub-nav">
+            <Link to="/addClient">Add</Link>
+            <input 
+              type="text"
+              className="form-control"
+              placeholder="client name"
+              value={searchClient}
+              onChange={onChangeSearchClient}
+            /> 
+            <button
+              type="button"
+              onClick={findClient}>
+              Search
+            </button>
+          </div>
           
-        </Col>
-      </Row>
-      
-          <p/>
             
               {clients && clients.map((client, index) => (
                   <div className="client-list">

@@ -55,7 +55,8 @@ input [textarea] {
 
 .sub-nav a {
   padding: 10px;
-  margin: 10px
+  margin: 10px;
+  text-decoration: none;
 }
 
 .container {
@@ -142,7 +143,6 @@ input [textarea] {
 
 .footbar-link {
   padding: 20px;
-  
 }
 
 .footbar-link:hover {

@@ -19,8 +19,8 @@ const SiteDetail = (props) => {
   const retrieveSite = (id, sid) => {
     RestDBService.getSite(id, sid)
     .then(res => {
-      setSite(res.data)
-      console.log(res.data)
+      setSite(res.data[0])
+      console.log(res.data[0])
     })
     .catch(e => {
       
@@ -32,12 +32,10 @@ const SiteDetail = (props) => {
 
   return (
     <div>
-      
-      Site Name: {site.site_name} <br/>
-      Address: {site.site_add1} <br />
-      {site.site_add2} <br />
-      {site.site_city} {site.site_state} {site.site_zip}
-
+      {site.site_name}<p/>
+      {site.site_add1}<br/>
+      {site.site_add2}
+      {site.site_city}, {site.site_state} {site.site_zip}
       <p/>
         
         
