@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import SiteCount from '../modules/SiteCount'
 import AssetCount from '../modules/AssetCount'
 import OrderList from '../modules/OrderList'
+import LoadingData from '../services/loadingData'
 
 
 const ClientDetail = (props) => {
@@ -36,7 +37,7 @@ const ClientDetail = (props) => {
   
  const test = sites ? ("test yes") : ("no")
   
-  console.log()
+  console.log(appState)
 
   return (
     <div>

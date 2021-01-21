@@ -73,8 +73,8 @@ const ClientDashboard = () => {
           
             
               {clients && clients.map((client, index) => (
-                  <div className="client-list">
-                  <Link to={`/clients/${client._id}`} key={client._id}>
+                  <div className="client-list" key={client._id}>
+                  <Link to={`/clients/${client._id}`} isLoading={appState.loading}>
                     {client.client_name}
                     <br />
                   </Link>
