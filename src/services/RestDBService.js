@@ -36,6 +36,10 @@ const updateClient = (id, data) => {
   return http.put(`/rest/clients/${id}`, data)
 }
 
+const updateAsClient = (url, data) => {
+  return http.put(`/rest/clients/${url}`, data)
+}
+
 const removeClient = id => {
   return http.delete(`/rest/clients/${id}`)
 }
@@ -54,6 +58,7 @@ export default {
   createClient,
   createAsset,
   updateClient,
+  updateAsClient,
   removeClient,
   searchClient
 }

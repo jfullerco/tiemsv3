@@ -42,7 +42,7 @@ const ClientDetail = (props) => {
       <div className="sub-nav"> 
         <Link to={`/addSite/${id}`}>Add Site</Link>
         <Link to={`/addAsset/${id}`}>Add Asset</Link>
-        
+        <Link to={`/admin/client/${id}`}>Update Client</Link>
       </div>
 
       <h5>{client.client_name}</h5>

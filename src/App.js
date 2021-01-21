@@ -15,6 +15,7 @@ import SiteDetail from './modules/SiteDetail'
 import AssetDetail from './components/AssetDetail'
 import AddAsset from './components/AddAsset'
 import ClientAdmin from './admin/components/ClientAdmin'
+import UpdateAsClient from './admin/modules/UpdateAsClient'
 
 import './style.css'
 
@@ -66,7 +67,9 @@ function App() {
           <Route path="/assets/:id" component={AssetDetail} />
           <Route path='/addAsset/:id' component={AddAsset} />
 
-          <Route path='/admin' component={ClientAdmin} />
+          <Route exact path='/admin' component={ClientAdmin} />
+
+          <Route path='/admin/client/:id' component={UpdateAsClient} />
       </Switch>
       </div>
         <div className="footbar">
