@@ -8,6 +8,9 @@ import '../style.css'
 function SiteCount(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
+  const [appState, setAppState] = useState({
+    loading: false
+  })
 
   useEffect(() => {
     retrieveClient(id)
@@ -22,9 +25,7 @@ const retrieveClient = (id) => {
       
     })
   }
-function siteList() {
-  <SiteList />
-}
+
 
 return (
   
