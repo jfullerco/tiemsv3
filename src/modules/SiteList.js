@@ -10,7 +10,7 @@ function SiteList(props) {
   const [sites, setSites] = useState([])
 
   useEffect(() => {
-    retrieveClient(id)
+    retrieveClient (id)
   }, [])
 
 const retrieveClient = (id) => {

@@ -25,12 +25,12 @@ const SiteDetail = (props) => {
     })
   }
   
-  console.log(sid)
+  console.log(site)
   console.log(id)
 
   return (
     <div>
-      <h5>{site.client}</h5>
+      <h5></h5>
       Site Name: {site.site_name} <br/>
       Address: {site.site_add1} <br />
       {site.site_add2} <br />
