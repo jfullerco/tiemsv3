@@ -14,9 +14,9 @@ function SiteCount(props) {
   }, [])
 
 const retrieveClient = (id) => {
-    RestDBService.getClient(id)
+    RestDBService.getAllSites(id)
     .then(res => {
-      setSites(res.data.sites)
+      setSites(res.data)
     })
     .catch(e => {
       
