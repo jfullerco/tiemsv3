@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import {Link} from 'react-router-dom'
 import SiteCount from '../modules/SiteCount'
-import AssetList from '../modules/AssetList'
+import AssetCount from '../modules/AssetCount'
 import OrderList from '../modules/OrderList'
 
 
@@ -49,7 +49,7 @@ const ClientDetail = (props) => {
 
       <div className="container">
         <SiteCount style="order: 1" />
-        <AssetList style="order: 2" />
+        <AssetCount style="order: 2" />
         <OrderList style="order: 3" />
       </div>
 

@@ -7,7 +7,7 @@ import '../style.css'
 
 function AssetCount(props) {
   const {id} = useParams()
-  const [sites, setSites] = useState([])
+  const [assets, setAssets] = useState([])
 
   useEffect(() => {
     retrieveClient(id)
@@ -28,7 +28,7 @@ return (
   
     <div className="widget">
      <table>
-      <th>Sites</th>
+      <th>Assets</th>
       <tr>
         {
          <Link to={`/client/${id}/assetList`}>{assets.length}</Link> 
