@@ -13,24 +13,26 @@ const ClientDetail = (props) => {
   const [client, setClient] = useState([])
   const [sites, setSites] = useState([])
   const [assets, setAssets] = useState([])
-
+  const [appState, setAppState] = useState({
+    loading: false
+  })
   useEffect(() => {
-      retrieveClient(id)
-    }, []
+//      retrieveClient(id)
+    setAppState({loading: true})
+      const retrieveClient = (id) => {
+        RestDBService.getClient(id)
+        .then(res => {
+          setClient(res.data)
+          setSites(res.data.sites)
+          setAssets(res.data.assets)
+          setAppState({ loading: false })
+        })
+        .catch(e => {
+          console.log()
+        })
+      }
+    }, [setAppState]
   )
-
-  const retrieveClient = (id) => {
-    RestDBService.getClient(id)
-    .then(res => {
-      setClient(res.data)
-      setSites(res.data.sites)
-      setAssets(res.data.assets)
-      
-    })
-    .catch(e => {
-      console.log()
-    })
-  }
   
  const test = sites ? ("test yes") : ("no")
   
@@ -48,7 +50,7 @@ const ClientDetail = (props) => {
       <h5>{client.client_name}</h5>
 
       <div className="container">
-        <SiteCount style="order: 1" />
+        <SiteCount isLoading={appState.loading} style="order: 1" />
         <AssetCount style="order: 2" />
         <OrderList style="order: 3" />
       </div>
