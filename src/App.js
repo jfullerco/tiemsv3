@@ -58,8 +58,8 @@ function App() {
           <Route exact path="/tickets" component={TicketDashboard} />
           <Route path='/tickets/:id' component={TicketDetail} />
 
-          <Route exact path="/sites" component={SiteCount} />
-          <Route path="/sites/:id" component={SiteList} />
+          <Route path="/client/:id/sites" component={SiteCount} />
+          <Route path="/client/:id/sites" component={SiteList} />
           <Route path="/client/:id/site/:sid" component={SiteDetail} />
 
           

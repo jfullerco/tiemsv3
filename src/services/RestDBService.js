@@ -16,6 +16,10 @@ const getSite = (id, sid) => {
   return http.get(`/rest/clients/${id}/sites/${sid}`)
 }
 
+const getAllSites = (id) => {
+  return http.get(`/rest/clients/${id}/sites`)
+}
+
 const createClient = data => {
   return http.post("/rest/clients", data)
 }
@@ -40,6 +44,7 @@ export default {
   getAllClients,
   getClient,
   getSite,
+  getAllSites,
   getAsset,
   createClient,
   createAsset,
