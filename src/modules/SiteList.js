@@ -23,10 +23,14 @@ const retrieveClient = (id) => {
       
     })
   }
-const handleChange = (event) => {
-  setSiteDetail(event)
+const showDetail = e => {
+  const [name, value] = e.target
+  console.log(e)
+  setSiteDetail({[name]: value})
+ 
 }
-console.log(sites)
+
+console.log()
 return (
   
     <div>
@@ -39,10 +43,8 @@ return (
         <td>
             {sites ? (
                     sites.map(site => (
-                      <div className="site-list" key={site._id} onChange={handleChange(site._id)}>
-                        <Link to={`/client/${id}/site/${site._id}`}>
-                          {site.site_name} 
-                        </Link>
+                      <div className="site-list" key={site._id}><button value={site} onClick={showDetail}>
+                        {site.site_name}</button>
                       </div>
                     ))
                   ):(

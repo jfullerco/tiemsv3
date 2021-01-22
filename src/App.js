@@ -2,8 +2,6 @@ import React from "react";
 import {Link, Switch, Route} from 'react-router-dom'
 
 import ClientDashboard from './components/ClientDashboard'
-import OrderDashboard from './components/OrderDashboard'
-import TicketDashboard from './components/TicketDashboard'
 import ClientDetail from './components/ClientDetail'
 import OrderDetail from './components/OrderDetail'
 import TicketDetail from './components/TicketDetail'
@@ -52,12 +50,6 @@ function App() {
           <Route exact path="/clients" component={ClientDashboard} />
           <Route path="/clients/:id" component={ClientDetail} />
           <Route path="/addClient" component={AddClient} />
-
-          <Route exact path="/orders" component={OrderDashboard} />
-          <Route path='/orders/:id' component={OrderDetail} />
-
-          <Route exact path="/tickets" component={TicketDashboard} />
-          <Route path='/tickets/:id' component={TicketDetail} />
 
           <Route path="/client/:id/siteCount" component={SiteCount} />
           <Route path="/client/:id/siteList" component={SiteList} />

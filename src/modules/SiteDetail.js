@@ -8,8 +8,9 @@ const SiteDetail = (props) => {
   
   const {id} = useParams()
   const {sid} = useParams()
+  const {site} = props
   
-  const [site, setSite] = useState([])
+  const [sites, setSites] = useState([site])
 
   useEffect(() => {
       retrieveSite(id, sid)
@@ -27,17 +28,17 @@ const SiteDetail = (props) => {
     })
   }
   
-  console.log(sid)
+  console.log(site)
   console.log(id)
 
   return (
     <div>
-      {site ? (
+      {sites ? (
                 <div>
-                {site.site_name}<p/>
-                {site.site_add1}<br/>
-                {site.site_add2}
-                {site.site_city}, {site.site_state} {site.site_zip}
+                {sites.site_name}<p/>
+                {sites.site_add1}<br/>
+                {sites.site_add2}
+                {sites.site_city}, {sites.site_state} {sites.site_zip}
                 </div>    
                   ):(
                 "No Sites"
