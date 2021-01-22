@@ -8,7 +8,7 @@ import '../style.css'
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
-  const [siteDetail, setSiteDetail] = useState([])
+  
 
   useEffect(() => {
     retrieveClient (id)
@@ -23,13 +23,7 @@ const retrieveClient = (id) => {
       
     })
   }
-const showDetail = e => {
-  
-  const site = e.target.value
-  
-  setSiteDetail(site)
-  
-}
+
 
 
 

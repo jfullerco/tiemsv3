@@ -50,7 +50,7 @@ const ClientDetail = (props) => {
 
       <div className="container">
         <SiteCount style="order: 1" sites={sites} /> 
-        <AssetCount style="order: 2" />
+        <AssetCount style="order: 2" assets={assets} />
         <OrderList style="order: 3" />
       </div>
 
