@@ -26,7 +26,7 @@ const retrieveClient = (id) => {
 const showDetail = e => {
   const [name, value] = e.target
   console.log(e)
-  setSiteDetail({[name]: value})
+  setSiteDetail()
  
 }
 
