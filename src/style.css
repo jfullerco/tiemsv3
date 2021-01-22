@@ -61,7 +61,7 @@ input [textarea] {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-flow: wrap;
@@ -69,9 +69,10 @@ input [textarea] {
 }
 
 .widget {
-  flex: 30%;
+  flex: auto;
   flex-basis: auto;
-  height: 200px;
+  height: 45px;
+  width: 80px;
   overflow: scroll;
   border: 2px solid;
   border-style: groove;

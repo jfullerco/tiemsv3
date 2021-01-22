@@ -5,8 +5,6 @@ import {Link} from 'react-router-dom'
 import SiteCount from '../modules/SiteCount'
 import AssetCount from '../modules/AssetCount'
 import OrderList from '../modules/OrderList'
-import LoadingData from '../services/loadingData'
-
 
 const ClientDetail = (props) => {
 
@@ -14,30 +12,25 @@ const ClientDetail = (props) => {
   const [client, setClient] = useState([])
   const [sites, setSites] = useState([])
   const [assets, setAssets] = useState([])
-  const [appState, setAppState] = useState({
-    loading: false
-  })
+  
   useEffect(() => {
-//      retrieveClient(id)
-    setAppState({loading: true})
-      const retrieveClient = (id) => {
+     retrieveClient(id)
+    }, []
+  )
+  const retrieveClient = (id) => {
         RestDBService.getClient(id)
         .then(res => {
           setClient(res.data)
           setSites(res.data.sites)
           setAssets(res.data.assets)
-          setAppState({ loading: false })
         })
         .catch(e => {
           console.log()
         })
       }
-    }, [setAppState]
-  )
-  
  const test = sites ? ("test yes") : ("no")
   
-  console.log(appState)
+  console.log()
 
   return (
     <div>
@@ -51,7 +44,7 @@ const ClientDetail = (props) => {
       <h5>{client.client_name}</h5>
 
       <div className="container">
-        <SiteCount isLoading={appState.loading} style="order: 1" />
+        <SiteCount style="order: 1" count={sites.length} /> 
         <AssetCount style="order: 2" />
         <OrderList style="order: 3" />
       </div>

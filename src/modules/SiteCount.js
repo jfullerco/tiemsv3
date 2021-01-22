@@ -6,26 +6,8 @@ import SiteList from './SiteList'
 import '../style.css'
 
 function SiteCount(props) {
-  const {id} = useParams()
-  const [sites, setSites] = useState([])
-  const [appState, setAppState] = useState({
-    loading: false
-  })
-
-  useEffect(() => {
-    retrieveClient(id)
-  }, [])
-
-const retrieveClient = (id) => {
-    RestDBService.getAllSites(id)
-    .then(res => {
-      setSites(res.data)
-    })
-    .catch(e => {
-      
-    })
-  }
-
+  const {count} = props
+  console.log(count)
 
 return (
   
@@ -33,9 +15,7 @@ return (
      <table>
       <th>Sites</th>
       <tr>
-        {
-         <Link to={`/client/${id}/siteList`}>{sites.length}</Link> 
-        }
+        {count}
     </tr>
     </table>
     </div>
