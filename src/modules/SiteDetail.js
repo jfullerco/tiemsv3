@@ -32,10 +32,19 @@ const SiteDetail = (props) => {
 
   return (
     <div>
-      {site.site_name}<p/>
-      {site.site_add1}<br/>
-      {site.site_add2}
-      {site.site_city}, {site.site_state} {site.site_zip}
+      {site ? (
+                <div>
+                {site.site_name}<p/>
+                {site.site_add1}<br/>
+                {site.site_add2}
+                {site.site_city}, {site.site_state} {site.site_zip}
+                </div>    
+                  ):(
+                "No Sites"
+                  )
+            }
+      
+      
       <p/>
         
         

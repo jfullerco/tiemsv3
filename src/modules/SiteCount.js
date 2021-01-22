@@ -6,8 +6,9 @@ import SiteList from './SiteList'
 import '../style.css'
 
 function SiteCount(props) {
-  const {count} = props
-  console.log(count)
+  const {id} = useParams()
+  const {sites} = props
+  console.log(sites)
 
 return (
   
@@ -15,7 +16,7 @@ return (
      <table>
       <th>Sites</th>
       <tr>
-        {count}
+        <Link to={`/client/${id}/siteList`}>{sites.length}</Link>
     </tr>
     </table>
     </div>

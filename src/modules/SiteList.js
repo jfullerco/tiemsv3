@@ -8,6 +8,7 @@ import '../style.css'
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
+  const [siteDetail, setSiteDetail] = useState()
 
   useEffect(() => {
     retrieveClient (id)
@@ -22,26 +23,38 @@ const retrieveClient = (id) => {
       
     })
   }
+const handleChange = (event) => {
+  setSiteDetail(event)
+}
 console.log(sites)
 return (
   
     <div>
      <table>
-      <th>Sites</th>
       <tr>
-        {sites ? (
-                sites.map(site => (
-                  <div className="site-list" key={site._id}>
-                    <Link to={`/client/${id}/site/${site._id}`}>
-                      {site.site_name} 
-                    </Link>
-                  </div>
-                ))
-              ):(
-            "No Sites"
-              )
-        }
-    </tr>
+        <th>Sites</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>
+            {sites ? (
+                    sites.map(site => (
+                      <div className="site-list" key={site._id} onChange={handleChange(site._id)}>
+                        <Link to={`/client/${id}/site/${site._id}`}>
+                          {site.site_name} 
+                        </Link>
+                      </div>
+                    ))
+                  ):(
+                "No Sites"
+                  )
+            }
+        </td>
+        <td>
+          <SiteDetail site={siteDetail}/>
+        </td>    
+      </tr>
+    
     </table>
     </div>
   )

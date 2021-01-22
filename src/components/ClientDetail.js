@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import SiteCount from '../modules/SiteCount'
 import AssetCount from '../modules/AssetCount'
 import OrderList from '../modules/OrderList'
+import SiteList from '../modules/SiteList'
 
 const ClientDetail = (props) => {
 
@@ -29,6 +30,10 @@ const ClientDetail = (props) => {
         })
       }
  const test = sites ? ("test yes") : ("no")
+
+ const handleChange = () => {
+   <div>this<SiteList id={id}/></div>
+ } 
   
   console.log()
 
@@ -44,7 +49,7 @@ const ClientDetail = (props) => {
       <h5>{client.client_name}</h5>
 
       <div className="container">
-        <SiteCount style="order: 1" count={sites.length} /> 
+        <SiteCount style="order: 1" sites={sites} /> 
         <AssetCount style="order: 2" />
         <OrderList style="order: 3" />
       </div>
