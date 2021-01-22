@@ -8,7 +8,7 @@ import '../style.css'
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
-  const [siteDetail, setSiteDetail] = useState()
+  const [siteDetail, setSiteDetail] = useState([])
 
   useEffect(() => {
     retrieveClient (id)
@@ -24,13 +24,16 @@ const retrieveClient = (id) => {
     })
   }
 const showDetail = e => {
-  const [name, value] = e.target
-  console.log(e)
-  setSiteDetail()
- 
+  
+  const site = e.target.value
+  
+  setSiteDetail(site)
+  
 }
 
-console.log()
+
+
+console.log(siteDetail)
 return (
   
     <div>
@@ -43,8 +46,9 @@ return (
         <td>
             {sites ? (
                     sites.map(site => (
-                      <div className="site-list" key={site._id}><button value={site} onClick={showDetail}>
-                        {site.site_name}</button>
+                      <div className="site-list" key={site._id}>
+                      
+                       <Link to={`/sites/${site._id}`} key="site._id"> {site.site_name}</Link>
                       </div>
                     ))
                   ):(
@@ -53,7 +57,7 @@ return (
             }
         </td>
         <td>
-          <SiteDetail site={siteDetail}/>
+           
         </td>    
       </tr>
     

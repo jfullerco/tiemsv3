@@ -10,12 +10,9 @@ const SiteDetail = (props) => {
   const {sid} = useParams()
   const {site} = props
   
-  const [sites, setSites] = useState([site])
+  const [sites, setSites] = useState([])
 
-  useEffect(() => {
-      retrieveSite(id, sid)
-    }, []
-  )
+  
 
   const retrieveSite = (id, sid) => {
     RestDBService.getSite(id, sid)
@@ -28,14 +25,14 @@ const SiteDetail = (props) => {
     })
   }
   
-  console.log(site)
+  console.log(props.detail)
   console.log(id)
 
   return (
     <div>
-      {sites ? (
+      {site ? (
                 <div>
-                {sites.site_name}<p/>
+                {site.site_name}<p/>
                 {sites.site_add1}<br/>
                 {sites.site_add2}
                 {sites.site_city}, {sites.site_state} {sites.site_zip}
