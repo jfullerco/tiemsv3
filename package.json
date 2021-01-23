@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "axios": "^0.21.0",
-    "bootstrap": "^4.5.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0"
