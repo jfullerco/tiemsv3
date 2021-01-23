@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import {Link, Switch, Route} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import SiteDetail from './SiteDetail'
 import '../style.css'
@@ -27,7 +27,7 @@ const retrieveClient = (id) => {
 
 
 
-console.log(siteDetail)
+console.log()
 return (
   
     <div>
@@ -42,7 +42,7 @@ return (
                     sites.map(site => (
                       <div className="site-list" key={site._id}>
                       
-                       <Link to={`/sites/${site._id}`} key="site._id"> {site.site_name}</Link>
+                       <Link to={`/client/:id/site/${site._id}`} key="site._id"> {site.site_name}</Link>
                       </div>
                     ))
                   ):(
@@ -51,7 +51,9 @@ return (
             }
         </td>
         <td>
-           
+           <Switch>
+              <Route path="/client/:id/site/:sid" component={SiteDetail} />
+           </Switch>
         </td>    
       </tr>
     
