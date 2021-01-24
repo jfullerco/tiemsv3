@@ -64,13 +64,16 @@ input [textarea] {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  flex-flow: wrap;
+  flex-flow: column;
   
 }
 
 .sidebar {
-  flex: auto;
+  flex: 0 0 100%;
   flex-basis: auto;
+  width: 100%;
+  flex-grow: 1;
+  background-color: white;
   
 }
 
@@ -87,8 +90,10 @@ input [textarea] {
 
 .main-container {
   padding: 1.5rem;
-  flex: auto;
-  height: 88vh;
+  flex: 0 0 100%;
+  flex-basis: auto;
+  flex-grow: 2;
+  width: 100%;
   overflow: scroll;
   background-color: white
 }
