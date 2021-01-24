@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
-import {useSite} from '../hooks/useSite'
+import {useSite, handleChange} from '../hooks/useSite'
 import SiteDetail from './SiteDetail'
 import '../style.css'
 
@@ -28,7 +28,7 @@ const retrieveClient = (id) => {
 
 
 
-console.log()
+console.log(siteDetail)
 return (
   
     <div>
@@ -41,8 +41,8 @@ return (
         <td>
             {sites ? (
                     sites.map(site => (
-                      <div className="site-list" key={site._id} >
-                      
+                      <div className="site-list" key={site._id}>
+                      <button onClick={handleChange} value={site._id}>Manage</button>
                        <Link to={`/client/${id}/siteList${site._id}`} site={() => {site}}>
                        
                        
