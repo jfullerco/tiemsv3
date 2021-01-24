@@ -25,7 +25,10 @@ const retrieveClient = (id) => {
     })
   }
 
-
+const handleChange = event => {
+  const siteDetail = event.target.value
+  setSiteDetail(siteDetail)
+}
 
 
 console.log(siteDetail)
@@ -56,7 +59,7 @@ return (
             }
         </td>
         <td>
-         <Route path="/client/:id/siteList:sid" component={SiteDetail} />  
+         <SiteDetail siteID={siteDetail} />
         </td>    
       </tr>
     
