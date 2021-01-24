@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
+import {useSite} from '../hooks/useSite'
 import SiteDetail from './SiteDetail'
 import '../style.css'
 
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
-  
+  const [siteDetail, setSiteDetail] = useSite()
 
   useEffect(() => {
     retrieveClient (id)

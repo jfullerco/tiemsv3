@@ -1,10 +1,15 @@
 import React, {useState} from 'react'
 
-const useSite = (props) => {
+function useSite(props) {
 
   const [siteDetail, setSiteDetail] = useState()
+  
   const handleChange = (event) => {
-    setSiteDetail(event.site)
+    const {site} = event.site
+
+    return setSiteDetail({site})
+
   }
+  
 }
-export default {useSite, handleChange}
+export default {useSite, siteDetail}
