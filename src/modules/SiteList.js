@@ -2,14 +2,14 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
-import {useSite, handleChange} from '../hooks/useSite'
-import SiteDetail from './SiteDetail'
+import useSiteDetail from '../hooks/useSiteDetail'
 import '../style.css'
 
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
-  const [siteDetail, setSiteDetail] = useSite()
+  const [siteDetail, useSiteDetail] = useSiteDetail()
+  
 
   useEffect(() => {
     retrieveClient (id)
@@ -26,9 +26,9 @@ const retrieveClient = (id) => {
   }
 
 const handleClick = (event) => {
-  const did = event.target.value
+  const siteDetailID = event.target.value
   console.log(did)
-  return <SiteDetail sid={did} />
+  setSiteDetail(siteDetailID)
 }
 
 

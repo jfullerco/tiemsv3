@@ -39,7 +39,7 @@ const SiteDetail = (props) => {
                 {site.site_city}, {site.site_state} {site.site_zip}
                 </div>    
                   ):(
-                "No Sites"
+                "No Site Choosen"
                   )
             }
       
