@@ -7,13 +7,13 @@ import '../style.css'
 const SiteDetail = (props) => {
   
   const {id} = useParams()
-  
+  const {sid} = useParams()
   
   const [site, setSite] = useState([])
-  const {sid} = props
-  console.log(props)
+  
+  console.log(id, sid)
   useEffect(() => {
-      retrieveSite(id,sid)
+      retrieveSite(id, sid)
     }, []
   )
 
@@ -22,7 +22,7 @@ const SiteDetail = (props) => {
     RestDBService.getSite(id, sid)
     .then(res => {
       setSite(res.data[0])
-      console.log(res.data[0])
+      console.log(res.data)
     })
     .catch(e => {
       
