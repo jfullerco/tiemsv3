@@ -19,40 +19,17 @@ import './style.css'
 
 function App() {
 
-  return (
-    <div>
-      
-      <div className="navbar">
-   
-          <Link to="/" className="navbar-link">
-            Dashboard
-          </Link>
-          <Link to="/clients" className="navbar-link">
-            Clients
-          </Link>
-          <Link to="/orders" className="navbar-link">
-            Orders
-          </Link>
-          <Link to="/tickets" className="navbar-link">
-            Tickets
-          </Link>
-          <Link to="/admin" className="navbar-link">
-            Admin
-          </Link>
-       
-      
-      </div>
-      
-      <div className="main-contain">
+  return (    
       <Switch>
+        <div className="main-container">
           <Route exact path="/">TIEMS Home</Route>
-
           <Route exact path="/clients" component={ClientDashboard} />
           <Route path="/clients/:id" component={ClientDetail} />
           <Route path="/addClient" component={AddClient} />
 
           <Route path="/client/:id/siteCount" component={SiteCount} />
           <Route path="/client/:id/siteList" component={SiteList} />
+          
           
 
           
@@ -62,12 +39,9 @@ function App() {
           <Route exact path='/admin' component={ClientAdmin} />
 
           <Route path='/admin/client/:id' component={UpdateAsClient} />
+
+        </div>    
       </Switch>
-      </div>
-        <div className="footbar">
-          
-        </div>  
-     </div>
   );
 }
 export default App

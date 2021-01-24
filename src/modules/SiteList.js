@@ -40,9 +40,13 @@ return (
         <td>
             {sites ? (
                     sites.map(site => (
-                      <div className="site-list" key={site._id}>
+                      <div className="site-list" key={site._id} >
                       
-                       <Link to={`/client/:id/site/${site._id}`} key="site._id"> {site.site_name}</Link>
+                       <Link to={`/client/${id}/siteList${site._id}`} site={() => {site}}>
+                       
+                       
+                       
+                        {site.site_name}</Link>
                       </div>
                     ))
                   ):(
@@ -51,9 +55,7 @@ return (
             }
         </td>
         <td>
-           <Switch>
-              <Route path="/client/:id/site/:sid" component={SiteDetail} />
-           </Switch>
+         <Route path="/client/:id/siteList:sid" component={SiteDetail} />  
         </td>    
       </tr>
     

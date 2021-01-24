@@ -68,6 +68,12 @@ input [textarea] {
   
 }
 
+.sidebar {
+  flex: auto;
+  flex-basis: auto;
+  
+}
+
 .widget {
   flex: auto;
   flex-basis: auto;
@@ -79,9 +85,9 @@ input [textarea] {
   border-radius: .25em;
 }
 
-.main-contain {
+.main-container {
   padding: 1.5rem;
-  flex: none;
+  flex: auto;
   height: 88vh;
   overflow: scroll;
   background-color: white

@@ -12,7 +12,7 @@ const SiteDetail = (props) => {
   const [site, setSite] = useState([])
 
   useEffect(() => {
-      retrieveSite(sid)
+      retrieveSite(id,sid)
     }, []
   )
 
@@ -33,9 +33,9 @@ const SiteDetail = (props) => {
       {site ? (
                 <div>
                 {site.site_name}<p/>
-                {sites.site_add1}<br/>
-                {sites.site_add2}
-                {sites.site_city}, {sites.site_state} {sites.site_zip}
+                {site.site_add1}<br/>
+                {site.site_add2}
+                {site.site_city}, {site.site_state} {site.site_zip}
                 </div>    
                   ):(
                 "No Sites"
