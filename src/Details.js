@@ -4,11 +4,11 @@ import SiteDetail from './modules/SiteDetail'
 
 const Details = () => {
   return (
-    <div className="details">
     
-    <Route path='/client/:id/site:sid' component={SiteDetail} />
+    <Switch>
+    <Route path='/siteList/:sid' component={SiteDetail} />
+    </Switch>
     
-    </div>
   )
 }
 export default Details

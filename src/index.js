@@ -14,7 +14,7 @@ ReactDOM.render(
     <div className="container">
       <Sidebar style="order: 1"/>
       <App style="order: 2"/>
-      <Details />
+      <Details style="order: 3"/>
     </div>
   </Router>, 
   document.getElementById("root"));

@@ -7,11 +7,11 @@ import '../style.css'
 const SiteDetail = (props) => {
   
   const {id} = useParams()
-  const {sid} = useParams()
+  const {sid} = props
   
   const [site, setSite] = useState([])
   
-  console.log(id, sid)
+  console.log(props)
   useEffect(() => {
       retrieveSite(id, sid)
     }, []

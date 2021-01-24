@@ -25,11 +25,12 @@ const retrieveClient = (id) => {
     })
   }
 
-const handleChange = event => {
-  const clicked = event.target.value
-  setSiteDetail(clicked)
-  return <SiteDetail siteID={siteDetail} />
+const handleClick = (event) => {
+  const did = event.target.value
+  console.log(did)
+  return <SiteDetail sid={did} />
 }
+
 
 
 console.log(siteDetail)
@@ -46,22 +47,19 @@ return (
             {sites ? (
                     sites.map(site => (
                       <div className="site-list" key={site._id}>
-                      <button onClick={handleChange} value={site._id}>Manage</button>
-                       <Link to={`/client/${id}/site${site._id}`} site={() => {site}}>
-                       
-                       
-                       
-                        {site.site_name}</Link>
+                      
+                       <Link to={`/client/${id}/siteList/${site._id}`}>
+                        {site.site_name}
+                       </Link>
+                        - <button onClick={handleClick} value={site._id}>manage</button>
+                      
                       </div>
                     ))
                   ):(
                 "No Sites"
                   )
             }
-        </td>
-        <td>
-         
-        </td>    
+        </td>  
       </tr>
     
     </table>
