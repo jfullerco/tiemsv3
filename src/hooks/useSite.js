@@ -6,5 +6,5 @@ const useSite = (props) => {
   const handleChange = (event) => {
     setSiteDetail(event.site)
   }
-
 }
+export default {useSite, handleChange}
