@@ -29,10 +29,7 @@ function App() {
 
           <Route path="/client/:id/siteCount" component={SiteCount} />
           <Route path="/client/:id/siteList" component={SiteList} />
-          
-          
 
-          
           <Route path="/assets/:id" component={AssetDetail} />
           <Route path='/addAsset/:id' component={AddAsset} />
 
