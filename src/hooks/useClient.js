@@ -4,9 +4,9 @@ import RestDBService from '../services/RestDBService'
 
 export function useClient() {
   const {id} = useParams()
-  const [ client, setClient ] = useState()
-  const [ sites, setSites ] = useState()
-  const [ assets, setAssets ] = useState()
+  const [ client, setClient ] = useState([])
+  const [ sites, setSites ] = useState([])
+  const [ assets, setAssets ] = useState([])
   
   useEffect(() => {
     retrieveClient(id)
