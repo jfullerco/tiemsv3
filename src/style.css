@@ -3,6 +3,8 @@ body {
   margin: 0px;
   display: flex;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
   flex-direction: column;
   
 }
@@ -29,6 +31,9 @@ input [textarea] {
   background-color: rgb(62, 62, 63);
   box-flex-group: content;
   padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
   
 }
 
@@ -46,6 +51,7 @@ input [textarea] {
 
 .navbar-link {
   padding: 20px;
+  
   
 }
 
@@ -72,7 +78,7 @@ input [textarea] {
 .sidebar {
   flex: 0 0 100%;
   flex-basis: auto;
-  width: 100%;
+  
   flex-grow: 1;
   background-color: white;
   
@@ -94,7 +100,7 @@ input [textarea] {
   flex: 0 0 100%;
   flex-basis: auto;
   flex-grow: 2;
-  width: 100%;
+  
   
   overflow: scroll;
   background-color: white
