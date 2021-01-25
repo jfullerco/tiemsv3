@@ -4,7 +4,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: rgb(62, 62, 63);
+  
 }
 
 tr {
@@ -66,6 +66,7 @@ input [textarea] {
   align-items: flex-start;
   flex-flow: column;
   
+  
 }
 
 .sidebar {
@@ -94,6 +95,7 @@ input [textarea] {
   flex-basis: auto;
   flex-grow: 2;
   width: 100%;
+  
   overflow: scroll;
   background-color: white
 }

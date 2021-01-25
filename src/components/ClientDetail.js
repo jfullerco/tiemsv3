@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import {Link} from 'react-router-dom'
-import SiteCount from '../modules/SiteCount'
+import {useSites} from '../hooks/useSites'
 import AssetCount from '../modules/AssetCount'
 import OrderList from '../modules/OrderList'
 import SiteList from '../modules/SiteList'
@@ -11,13 +11,15 @@ const ClientDetail = (props) => {
 
   const {id} = useParams()
   const [client, setClient] = useState([])
-  const [sites, setSites] = useState([])
+  const [sites, setSites] = useSites([])
   const [assets, setAssets] = useState([])
   
+  
   useEffect(() => {
-     retrieveClient(id)
+    retrieveClient(id)
     }, []
   )
+
   const retrieveClient = (id) => {
         RestDBService.getClient(id)
         .then(res => {
@@ -26,14 +28,9 @@ const ClientDetail = (props) => {
           setAssets(res.data.assets)
         })
         .catch(e => {
-          console.log()
+          console.log(e)
         })
       }
- const test = sites ? ("test yes") : ("no")
-
- const handleChange = () => {
-   <div>this<SiteList id={id}/></div>
- } 
   
   console.log()
 
@@ -49,7 +46,7 @@ const ClientDetail = (props) => {
       <h5>{client.client_name}</h5>
 
       <div className="container">
-        <SiteCount style="order: 1" sites={sites} /> 
+        
         <AssetCount style="order: 2" assets={assets} />
         <OrderList style="order: 3" />
       </div>

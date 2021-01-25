@@ -15,9 +15,11 @@ return (
     <div className="widget">
      <table>
       <th>Sites</th>
-      <tr>
-        <Link to={`/client/${id}/siteList`}>{sites.length}</Link>
-    </tr>
+        <tbody>
+          <tr>
+            <Link to={`/client/${id}/siteList`}>{sites.length}</Link>
+          </tr>
+        </tbody>
     </table>
     </div>
   )

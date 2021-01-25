@@ -8,7 +8,7 @@ import '../style.css'
 function SiteList(props) {
   const {id} = useParams()
   const [sites, setSites] = useState([])
-  const [siteDetail, useSiteDetail] = useSiteDetail()
+  
   
 
   useEffect(() => {
@@ -21,19 +21,15 @@ const retrieveClient = (id) => {
       setSites(res.data)
     })
     .catch(e => {
-      
+      console.log(e)
     })
   }
 
-const handleClick = (event) => {
-  const siteDetailID = event.target.value
-  console.log(did)
-  setSiteDetail(siteDetailID)
-}
 
 
 
-console.log(siteDetail)
+
+console.log()
 return (
   
     <div>
@@ -51,7 +47,7 @@ return (
                        <Link to={`/client/${id}/siteList/${site._id}`}>
                         {site.site_name}
                        </Link>
-                        - <button onClick={handleClick} value={site._id}>manage</button>
+                        
                       
                       </div>
                     ))
