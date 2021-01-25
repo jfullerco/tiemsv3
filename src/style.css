@@ -68,20 +68,15 @@ input [textarea] {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-flow: column;
-  
+  vertical-align: text-top;
   
 }
 
-.sidebar {
-  flex: 0 0 100%;
-  flex-basis: auto;
-  
-  flex-grow: 1;
-  background-color: white;
-  
+details {
+  vertical-align: text-top;
 }
 
 .widget {
@@ -97,11 +92,6 @@ input [textarea] {
 
 .main-container {
   padding: 1.5rem;
-  flex: 0 0 100%;
-  flex-basis: auto;
-  flex-grow: 2;
-  
-  
   overflow: scroll;
   background-color: white
 }

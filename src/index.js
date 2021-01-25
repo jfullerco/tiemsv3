@@ -11,10 +11,6 @@ import './style.css'
 ReactDOM.render(
   <Router>
     <Navbar />
-    <div className="container">
-      <Sidebar style="order: 1"/>
-      <App style="order: 2"/>
-      <Details style="order: 3"/>
-    </div>
+    <App />
   </Router>, 
   document.getElementById("root"));

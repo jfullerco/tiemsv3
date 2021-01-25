@@ -23,7 +23,7 @@ return (
 
       <h5>{client.client_name}</h5>
 
-      <div className="container">
+      <div className="details">
         <SiteCount sites={sites} />
         
       </div>

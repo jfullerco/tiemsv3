@@ -10,7 +10,7 @@ const SiteDetail = (props) => {
   const {site} = props
 
   return (
-    <div>
+    <div className="details">
       {site ? (
                 <div>
                 {site.site_name}<p/>

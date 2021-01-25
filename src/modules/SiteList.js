@@ -42,7 +42,7 @@ return (
                   )
             }
         </td>
-        <td><SiteDetail site={site} /></td>  
+        <td><SiteDetail site={site} className="details" /></td>  
       </tr>
     </table>
     </div>
