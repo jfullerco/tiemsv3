@@ -67,17 +67,16 @@ input [textarea] {
 
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: column;
-  vertical-align: text-top;
+  flex-direction: row;
   
+  align-content: stretch;
+  flex-flow: row;
+  vertical-align: text-top;
+  border: 1px;
+  align-self: stretch;
 }
 
-details {
-  vertical-align: text-top;
-}
+
 
 .widget {
   flex: auto;
@@ -92,8 +91,14 @@ details {
 
 .main-container {
   padding: 1.5rem;
+  flex: 0 0 100%;
+  flex-basis: auto;
+  flex-grow: 2;
+  border: 1px solid;
+  align-content: stretch;
   overflow: scroll;
-  background-color: white
+  background-color: white;
+  
 }
 
 .client-list {
@@ -132,31 +137,3 @@ details {
   font-size: 0.75em;
   color: darkslategrey
 }
-/* footer */
-
-.footbar {
-  background-color: rgb(62, 62, 63);
-  box-flex-group: content;
-  flex-grow: 1;
-}
-
-.footbar a {
-  color: whitesmoke;
-  text-decoration: none;
-  text-emphasis-color: grey;
-}
-
-.footbar a:hover {
-  color: rgb(36, 35, 35);
-  text-shadow:  rgb(255, 255, 255);
-}
-
-.footbar-link {
-  padding: 20px;
-}
-
-.footbar-link:hover {
-  background-color: rgb(107, 108, 109);
-}
-
-
