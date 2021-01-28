@@ -1,33 +1,46 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import RestDBService from '../services/RestDBService'
+import {useClient} from '../hooks/useClient'
 import '../style.css'
 
 const SiteDetail = (props) => {
   
   const {id} = useParams()
   const {site} = props
+  const {assets} = useClient()
+  const [asset, setAsset] = useState([assets])
+
+  console.log(asset)
 
   return (
     <div>
       {site ? (
-                <div>
-                {site.site_name}<p/>
-                {site.site_add1}<br/>
+          <div>
+              <div className="detail">
+                <div className="detail-label">
+                  Site Name:
+                </div> 
+                  <text className="name">
+                    {site.site_name}
+                  </text>
+                <p />
+                <div className="detail-label">
+                  Address:
+                </div> 
+                {site.site_add1}<br />
                 {site.site_add2}
                 {site.site_city}, {site.site_state} {site.site_zip}
-                </div>    
-                  ):(
-                "No Site Choosen"
-                  )
-            }
-      
-      
-      <p/>
-        
-        
-            
+              </div>
+          </div>  
+              ):(
+                <div className="detail">
+                <div className="detail-label">
+                  Click Site for details
+                </div>
+                </div>
+              )      
+      }          
     </div>
   )
 }

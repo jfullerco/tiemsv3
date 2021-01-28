@@ -10,15 +10,11 @@ function SiteCount(props) {
 
 return (
   
-    <div className="widget">
-     <table>
-      <th>Sites</th>
-        <tbody>
-          <tr>
-            <Link to={`/client/${id}/siteList`}>{sites.length}</Link>
-          </tr>
-        </tbody>
-    </table>
+    <div className="widget"> 
+      <h2>Sites</h2>
+        <Link to={`/client/${id}/siteList`}>
+              {sites.length}
+        </Link>
     </div>
   )
 }

@@ -8,6 +8,7 @@ import '../style.css'
 function SiteList(props) {
   const {id} = useParams()
   const {sites} = useClient()
+  
   const [site, setSite] = useState()
 
 
@@ -18,33 +19,26 @@ function SiteList(props) {
 console.log()
 return (
   
-    <div>
-     <table>
-      <tr>
-        <th>Sites</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>
+    <div className="main-container">
+      <h2>Sites</h2><p/>
+        <div className="container">
             {sites ? (
                     sites.map(site => (
                       <div className="site-list" key={site._id} onClick={() => handleChange(site)}>
                       
                        <Link to={`/client/${id}/siteList/${site._id}`}>
-                        {site.site_name}
-                        
+                          {site.site_name}
                        </Link>
-                    
                       </div>
                     ))
                   ):(
                 "No Sites"
                   )
             }
-        </td>
-        <td><SiteDetail site={site} className="details" /></td>  
-      </tr>
-    </table>
+          </div>
+        <div className="container">
+          <SiteDetail site={site} className="details" />
+        </div>  
     </div>
   )
 }

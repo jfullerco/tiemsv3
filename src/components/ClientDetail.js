@@ -13,7 +13,7 @@ useEffect(() => {
 
 console.log(client.client_name)
 return (
-  <div>
+  <div className="main-container">
       
       <div className="sub-nav"> 
         <Link to={`/addSite/${id}`}>Add Site</Link>

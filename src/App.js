@@ -21,7 +21,7 @@ function App() {
 
   return (    
       <Switch>
-        <div className="main-container">
+        <div>
           <Route exact path="/">TIEMS Home</Route>
           <Route exact path="/clients" component={ClientDashboard} />
           <Route path="/clients/:id" component={ClientDetail} />
