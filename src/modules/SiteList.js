@@ -7,6 +7,7 @@ import AssetListbySite from './AssetListbySite'
 import '../style.css'
 
 function SiteList(props) {
+
   const {id} = useParams()
   const {sites} = useClient()
   
@@ -19,23 +20,25 @@ function SiteList(props) {
     setAsset(siteID)
   }
 
-console.log()
 return (
   
     <div className="main-container">
-      <h2>Sites</h2><p/>
-        <div className="container">
-            {sites ? (
-                    sites.map(site => (
-                      <div className="site-list" key={site._id} onClick={() => handleChange(site)}>
-                      
-                       <Link to={`/client/${id}/siteList/${site._id}`}>
-                          {site.site_name}
-                       </Link>
+      <h2>Sites</h2>
+        <p/>
+          <div className="container">
 
-                       <div className="detail-label">
-                            ID: {site._id}
-                        </div>
+            {sites ? ( sites.map(site => (
+
+                      <div 
+                        className="site-list" 
+                        key={site._id} 
+                        onClick={() => handleChange(site)}
+                      >
+                          {site.site_name}
+              
+                          <div className="detail-label">
+                              ID: {site._id}
+                          </div>
   
                       </div>
                     ))
@@ -44,9 +47,18 @@ return (
                   )
             }
           </div>
+
         <div className="container">
-          <SiteDetail site={site} className="details" />
-          <AssetListbySite site={asset} />
+
+          <SiteDetail 
+            site={site} 
+            className="details" 
+          />
+
+          <AssetListbySite 
+            site={asset} 
+          />
+
         </div>  
     </div>
   )
