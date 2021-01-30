@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
+import AssetListbySite from './AssetListbySite'
+import RestDBService from '../services/RestDBService'
 import '../style.css'
 
 const SiteDetail = (props) => {
@@ -9,10 +11,13 @@ const SiteDetail = (props) => {
   const {id} = useParams()
   const {site} = props
   const {assets} = useClient()
-  const [asset, setAsset] = useState([assets])
+  const [assetClick, setAssetClick] = useState()
+  
 
-  console.log(asset)
-
+  const handleChange = () => {
+    setAssetClick(site._id)
+  }
+console.log(site)
   return (
     <div>
       {site ? (
@@ -31,8 +36,16 @@ const SiteDetail = (props) => {
                 {site.site_add1}<br />
                 {site.site_add2}
                 {site.site_city}, {site.site_state} {site.site_zip}
+                <div className="detail-label">
+                  ID:
+                </div> {site._id}
+                <div onClick={handleChange}>Assets</div>
               </div>
-          </div>  
+              <div>
+                  <AssetListbySite site={assetClick} />
+              </div>
+          </div>
+            
               ):(
                 <div className="detail">
                 <div className="detail-label">

@@ -1,50 +1,48 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
+import RestDBService from '../services/RestDBService'
 import '../style.css'
 
-function AssetList(props) {
-  const {id} = useParams()
+function AssetListbySite(props) {
+  
+  const {site} = props
   const [assets, setAssets] = useState([])
   
+  
   useEffect(() => {
-    retrieveClient(id)
-  }, [])
+    retrieveAsset(site)
+  })
 
-const retrieveClient = (id) => {
-    RestDBService.getClient(id)
+const retrieveAsset = (site) => {
+    RestDBService.getAssetBySite(site)
     .then(res => {
-      setAssets(res.data.assets)
+      setAssets(res.data)
     })
     .catch(e => {
       
     })
   }
-
+console.log(assets)
 return (
   
-    <div className="widget">
-    <table>
-      <th>Assets</th>
-      <tr>
+    <div className="container">
         {assets ? (
                 assets.map(asset => (
-                  <tr>
+                  <div className="site-list">
                     <Link to={`/assets/${asset._id}`} key="asset._id">
                       {asset.assetID} 
                     </Link>
-                  </tr>
+                  </div>
                 ))
               ):(
             "No Assets"
               )
         }
-    </tr>
-    </table>
     
     </div>
 
   
 )
 }
-export default AssetList
+export default AssetListbySite

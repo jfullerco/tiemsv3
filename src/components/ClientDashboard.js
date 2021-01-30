@@ -54,9 +54,10 @@ const ClientDashboard = () => {
   }
   
   return (
-    <div>   
-          <div className="sub-nav">
-            <Link to="/addClient">Add</Link>
+    <div className="main-container"> 
+      <h2>Clients</h2> <p /> 
+          <div className="container">
+            <Link to="/addClient">Add</Link><p />
             <input 
               type="text"
               className="form-control"
@@ -69,8 +70,8 @@ const ClientDashboard = () => {
               onClick={findClient}>
               Search
             </button>
-          </div>
           
+          <p />
             
               {clients && clients.map((client, index) => (
                   <div className="client-list" key={client._id}>
@@ -80,7 +81,8 @@ const ClientDashboard = () => {
                   </Link>
                   </div>
                 ))}
-            
+              </div>
+           <div className="container"></div>
     </div>
   )
 }

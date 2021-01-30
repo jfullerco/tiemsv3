@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
 import SiteDetail from './SiteDetail'
+import AssetListBySite from './AssetListbySite'
 import '../style.css'
 
 function SiteList(props) {
@@ -29,6 +30,11 @@ return (
                        <Link to={`/client/${id}/siteList/${site._id}`}>
                           {site.site_name}
                        </Link>
+
+                       <div className="detail-label">
+                            ID: {site._id}
+                        </div>
+  
                       </div>
                     ))
                   ):(

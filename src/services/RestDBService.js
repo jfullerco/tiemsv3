@@ -12,6 +12,10 @@ const getAsset = id => {
   return http.get(`/rest/assets/${id}`)
 }
 
+const getAssetBySite = (site) => {
+  return http.get(`/rest/sites/${site}/site_assets`)
+}
+
 const getAllAssets = (id) => {
   return http.get(`/rest/clients/${id}/assets`)
 }
@@ -54,6 +58,7 @@ export default {
   getSite,
   getAllSites,
   getAsset,
+  getAssetBySite,
   getAllAssets,
   createClient,
   createAsset,

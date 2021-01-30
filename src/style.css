@@ -50,13 +50,10 @@ input [textarea] {
   grid-template-columns: min-content auto;
   padding: 1.5rem;
   background-color: white;
-  
 }
 
 .container-item {
   align-items: stretch;
-  z-index: 3;
-  
 }
 
 .widget {
