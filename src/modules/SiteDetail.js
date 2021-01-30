@@ -15,9 +15,10 @@ const SiteDetail = (props) => {
   
 
   const handleChange = () => {
-    setAssetClick(site._id)
+    setAssetClick(site)
   }
-console.log(site)
+
+
   return (
     <div>
       {site ? (
@@ -41,9 +42,7 @@ console.log(site)
                 </div> {site._id}
                 <div onClick={handleChange}>Assets</div>
               </div>
-              <div>
-                  <AssetListbySite site={assetClick} />
-              </div>
+              
           </div>
             
               ):(

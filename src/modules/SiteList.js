@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
 import SiteDetail from './SiteDetail'
-import AssetListBySite from './AssetListbySite'
+import AssetListbySite from './AssetListbySite'
 import '../style.css'
 
 function SiteList(props) {
@@ -11,10 +11,12 @@ function SiteList(props) {
   const {sites} = useClient()
   
   const [site, setSite] = useState()
-
+  const [asset, setAsset] = useState()
 
   const handleChange = (site) => {
+    const siteID = site._id
     setSite(site)
+    setAsset(siteID)
   }
 
 console.log()
@@ -44,6 +46,7 @@ return (
           </div>
         <div className="container">
           <SiteDetail site={site} className="details" />
+          <AssetListbySite site={asset} />
         </div>  
     </div>
   )

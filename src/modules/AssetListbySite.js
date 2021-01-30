@@ -12,7 +12,7 @@ function AssetListbySite(props) {
   
   useEffect(() => {
     retrieveAsset(site)
-  })
+  },[])
 
 const retrieveAsset = (site) => {
     RestDBService.getAssetBySite(site)

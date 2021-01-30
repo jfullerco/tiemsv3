@@ -27,7 +27,7 @@ function App() {
           <Route path="/clients/:id" component={ClientDetail} />
           <Route path="/addClient" component={AddClient} />
 
-          <Route path="/client/:id/siteCount" component={SiteCount} />
+          
           <Route path="/client/:id/siteList" component={SiteList} />
 
           <Route path="/assets/:id" component={AssetDetail} />
