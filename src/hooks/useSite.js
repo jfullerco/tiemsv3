@@ -16,7 +16,7 @@ const useSite = (props) => {
     RestDBService.getSite(siteID)
     .then(res => {
       setAssets(res.data.assets)
-      console.log(assets)
+      console.log(res.data.assets)
     })
     .catch(e => {
       console.log(e)

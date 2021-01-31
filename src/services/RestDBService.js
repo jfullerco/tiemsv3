@@ -20,8 +20,8 @@ const getAllAssets = (id) => {
   return http.get(`/rest/clients/${id}/assets`)
 }
 
-const getSite = (id, sid) => {
-  return http.get(`/rest/clients/${id}/sites/${sid}`)
+const getSite = siteID => {
+  return http.get(`/rest/sites/${siteID}`)
 }
 
 const getAllSites = (id) => {

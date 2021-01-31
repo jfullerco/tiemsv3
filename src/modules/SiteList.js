@@ -14,14 +14,14 @@ function SiteList(props) {
   
   const [site, setSite] = useState()
   const [asset, setAsset] = useState()
-  const [siteChosen, setSiteChosen] = useState(null)
+  
   
   const [siteID, setSiteID] = useSite()
 
   const handleChange = (site) => {
     
     setSite(site)
-    setSiteChosen(site._id)
+    setSiteID(site._id)
   }
 
 return (
