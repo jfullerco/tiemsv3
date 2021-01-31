@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
+import useSite from '../hooks/useSite'
 import SiteDetail from './SiteDetail'
 import AssetListbySite from './AssetListbySite'
 import '../style.css'
@@ -13,11 +14,14 @@ function SiteList(props) {
   
   const [site, setSite] = useState()
   const [asset, setAsset] = useState()
+  const [siteChosen, setSiteChosen] = useState(null)
+  
+  const [siteID, setSiteID] = useSite()
 
   const handleChange = (site) => {
-    const siteID = site._id
+    
     setSite(site)
-    setAsset(siteID)
+    setSiteChosen(site._id)
   }
 
 return (
