@@ -13,10 +13,10 @@ const useSite = (props) => {
   },[siteID])
 
   const retrieveSites = (siteID) => {
-    RestDBService.getSite(siteID)
+    RestDBService.getAssetbySite(siteID)
     .then(res => {
-      setAssets(res.data.assets)
-      console.log(res.data.assets)
+      setAssets(res.data)
+      console.log(res.data)
     })
     .catch(e => {
       console.log(e)
