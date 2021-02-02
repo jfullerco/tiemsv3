@@ -14,10 +14,11 @@ useEffect(() => {
 console.log(client.client_name)
 return (
   <div>  
-      <div className="sub-nav"> 
-        <div className="sub-nav-item 1"><Link to={`/addSite/${id}`} >Add Site</Link></div>
-        <div className="sub-nav-item 2"><Link to={`/addAsset/${id}`} >Add Asset</Link></div>
-        <div className="sub-nav-item 3"><Link to={`/admin/client/${id}`} >Update Client</Link></div>
+      <div className="row"> 
+        <div className="one column"><Link to={`/addSite/${id}`} >Add Site</Link></div>
+        <div className="one column"><Link to={`/addAsset/${id}`} >Add Asset</Link></div>
+        <div className="one column"><Link to={`/admin/client/${id}`} >Update Client</Link></div>
+        <div className="seven columns"></div>
       </div>
     <div className="content">
       <h2>Client Dashboard</h2><br />
