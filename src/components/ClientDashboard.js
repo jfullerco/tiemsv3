@@ -54,23 +54,29 @@ const ClientDashboard = () => {
   }
   
   return (
-    <div className="main-container"> 
-      <h2>Clients</h2> <p /> 
-          <div className="container">
-            <Link to="/addClient">Add</Link><p />
-            <input 
-              type="text"
-              className="form-control"
-              placeholder="client name"
-              value={searchClient}
-              onChange={onChangeSearchClient}
-            /> 
-            <button
-              type="button"
-              onClick={findClient}>
-              Search
-            </button>
-          
+    <div>  
+          <div className="sub-nav">
+            <div className="sub-nav-item">
+              <Link to="/addClient">Add</Link>
+            </div>
+            <div className="sub-nav-item"> 
+              <input 
+                  type="text"
+                  placeholder="client name"
+                  value={searchClient}
+                  onChange={onChangeSearchClient}
+                /> 
+            </div>
+            <div className="sub-nav-item">
+              <button
+                type="button"
+                onClick={findClient}
+                >
+                Search
+              </button>
+            </div>
+          </div><div>
+          <h2>Clients</h2> <p />
           <p />
             
               {clients && clients.map((client, index) => (

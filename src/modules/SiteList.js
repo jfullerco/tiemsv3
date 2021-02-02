@@ -26,7 +26,7 @@ function SiteList(props) {
 
 return (
   
-    <div className="main-container">
+    <div className="content">
       <h2>Sites</h2>
         <p/>
           <div className="container">

@@ -10,7 +10,9 @@ import './style.css'
 
 ReactDOM.render(
   <Router>
-    <Navbar />
-    <App />
+    <div className="grid-main">
+      <Navbar />
+      <App />
+    </div>
   </Router>, 
   document.getElementById("root"));
