@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const ClientDashboard = () => {
   
-  
   const [clients, setClients] = useState([])
   const [currentClient, setCurrentClient] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(-1)
@@ -55,27 +54,34 @@ const ClientDashboard = () => {
   
   return (
     <div>  
-          <div className="sub-nav">
-            <div className="sub-nav-item">
+          <div className="row">
+            <div className="one columns">
               <Link to="/addClient">Add</Link>
             </div>
-            <div className="sub-nav-item"> 
-              <input 
+          </div>
+
+            <div className="row"> 
+              
+              <div className="two columns">
+                <input 
                   type="text"
                   placeholder="client name"
                   value={searchClient}
                   onChange={onChangeSearchClient}
                 /> 
+              </div>
+
+              <div className="two columns">
+                <button
+                  type="button"
+                  onClick={findClient}
+                  >
+                  Search
+                </button>
+              </div>
+              <div className="5 columns"></div>
             </div>
-            <div className="sub-nav-item">
-              <button
-                type="button"
-                onClick={findClient}
-                >
-                Search
-              </button>
-            </div>
-          </div><div>
+          <div>
           <h2>Clients</h2> <p />
           <p />
             
