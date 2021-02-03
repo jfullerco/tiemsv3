@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {Link, Switch, Route} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
 import useSite from '../hooks/useSite'
+
 import SiteDetail from './SiteDetail'
 import AssetListbySite from './AssetListbySite'
 
@@ -13,7 +14,7 @@ function SiteList(props) {
   const {sites} = useClient()
   
   const [site, setSite] = useState()
-  const [asset, setAsset] = useState()
+  const [assetList, setAssetList] = useState()
   
   
   const [siteID, setSiteID] = useSite()
@@ -22,14 +23,15 @@ function SiteList(props) {
     
     setSite(site)
     setSiteID(site._id)
+    setAssetList(site.site_assets)
   }
 
 return (
   
-    <div className="content">
-      <h2>Sites</h2>
-        <p/>
-          <div className="container">
+    <div className="row">
+    <div className="one column"></div>
+      <h5>Sites</h5>
+        <div className="four columns">
 
             {sites ? ( sites.map(site => (
 
@@ -52,7 +54,7 @@ return (
             }
           </div>
 
-        <div className="container">
+        <div className="five columns">
 
           <SiteDetail 
             site={site} 
@@ -60,7 +62,7 @@ return (
           />
 
           <AssetListbySite 
-            site={asset} 
+            assetList={assetList} 
           />
 
         </div>  

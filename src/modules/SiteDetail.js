@@ -11,6 +11,7 @@ const SiteDetail = (props) => {
   const {id} = useParams()
   const {site} = props
   const {assets} = useClient()
+  
   const [assetClick, setAssetClick] = useState()
   
 
@@ -39,8 +40,8 @@ const SiteDetail = (props) => {
                 {site.site_city}, {site.site_state} {site.site_zip}
                 <div className="detail-label">
                   ID:
-                </div> {site._id}
-                <div onClick={handleChange}>Assets</div>
+                 {site._id}
+                </div>
               </div>
               
           </div>

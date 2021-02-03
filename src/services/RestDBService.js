@@ -8,8 +8,8 @@ const getClient = id => {
   return http.get(`/rest/clients/${id}`)
 }
 
-const getAsset = id => {
-  return http.get(`/rest/assets/${id}`)
+const getAsset = (sid, aid) => {
+  return http.get(`/rest/sites/${sid}/site_assets/${aid}`)
 }
 
 const getAssetbySite = siteID => {

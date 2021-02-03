@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-emphasis-color: grey;
+  font-size: 1.75rem;
+}
+
+.navbar-link {
+  padding: 5px;
+  padding-left: 15px;
+  grid-area: nav
+}
+
+.client-list {
+  width: 200px;
+  padding: 20px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.client-list:hover {
+  background-color: lightgray;
+}
+
+.client-list a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: darkslategrey
+}
+
+.site-list {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.site-list:hover {
+  background-color: lightgray;
+}
+
+.site-list a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: darkslategrey
+}
+
+.detail {
+  width: 300px;
+  padding: 20px;
+  margin: 5px;
+  border: 1px 1px #ccc;
+  border-radius: 5px ;
+  border-style: ridge;
+  position: fixed;
+  font-size: 1.2rem;
+}
+
+.detail-label {
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.detail .name {
+  text-decoration: underline;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

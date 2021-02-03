@@ -6,24 +6,25 @@ import RestDBService from '../services/RestDBService'
 
 function AssetListbySite(props) {
   
-  const {site} = props
+  const {assetList} = props
+  console.log()
   
   
   
-console.log(assets)
+console.log(assetList)
 return (
   
-    <div className="container">
-        {assets ? (
-                assets.map(asset => (
-                  <div className="site-list">
+    <div className="row">
+        {assetList ? (
+                assetList.map(asset => (
+                  <div >
                     <Link to={`/assets/${asset._id}`} key="asset._id">
                       {asset.assetID} 
                     </Link>
                   </div>
                 ))
               ):(
-            "No Assets"
+            " "
               )
         }
     

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link, Route, Switch} from 'react-router-dom'
+import './custom.css'
 
 const Navbar = () => {
   return (

@@ -6,6 +6,7 @@ import Navbar from './Navbar'
 import Details from './Details'
 
 import './skeleton.css'
+import './custom.css'
 
 ReactDOM.render(
   <Router>
