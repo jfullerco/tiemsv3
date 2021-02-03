@@ -5,7 +5,7 @@ import {useClient} from '../hooks/useClient'
 import useSite from '../hooks/useSite'
 import SiteDetail from './SiteDetail'
 import AssetListbySite from './AssetListbySite'
-import '../style.css'
+
 
 function SiteList(props) {
 

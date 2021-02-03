@@ -14,11 +14,18 @@
   padding-left: 1rem;
   box-sizing: border-box; }
 .row {
-  width: 100em;
   padding: 0;
-  
 }
-
+.navbar {
+  background-color: rgb(62, 62, 63);
+  display: grid;
+  grid-template-columns: 100px 100px 100em;
+  height: 30px;
+  padding: 5px;
+  align-items: center;
+  width: 100vw;
+  grid-area: nav;
+}
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -139,7 +146,8 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #1EAEDB; 
+  margin-right: 5px;}
 a:hover {
   color: #0FA0CE; }
 

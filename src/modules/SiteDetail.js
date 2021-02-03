@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {useClient} from '../hooks/useClient'
 import AssetListbySite from './AssetListbySite'
 import RestDBService from '../services/RestDBService'
-import '../style.css'
+
 
 const SiteDetail = (props) => {
   

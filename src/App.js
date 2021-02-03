@@ -10,7 +10,7 @@ import SiteDetail from './modules/SiteDetail'
 import AddAsset from './components/AddAsset'
 import UpdateAsClient from './admin/modules/UpdateAsClient'
 
-import './style.css'
+
 
 function App() {
 

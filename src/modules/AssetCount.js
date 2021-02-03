@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 import AssetList from './AssetList'
-import '../style.css'
+
 
 function AssetCount(props) {
   const {id} = useParams()

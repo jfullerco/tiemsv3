@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import {assets} from '../hooks/useSite'
 import RestDBService from '../services/RestDBService'
-import '../style.css'
 
 function AssetListbySite(props) {
   

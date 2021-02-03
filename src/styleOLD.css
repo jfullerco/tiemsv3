@@ -22,6 +22,7 @@ input [textarea] {
   grid-template-columns: 100px 100px 100em;
   height: 20px;
   padding: 10px;
+  width: 100em;
   overflow-x: hidden;
   grid-area: nav;
 }
