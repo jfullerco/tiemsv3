@@ -15,6 +15,7 @@ function SiteList(props) {
   
   const [site, setSite] = useState()
   const [assetList, setAssetList] = useState()
+  const [sortedSites, setSortedSites] = useState()
   
   
   const [siteID, setSiteID] = useSite()
@@ -25,12 +26,16 @@ function SiteList(props) {
     setSiteID(site._id)
     setAssetList(site.site_assets)
   }
-
+  const sortData = (sites) => {
+    setSortedSites(sites.sort(a => a.site_name ? 1 : -1))
+    console.log(sortedSites)
+  }
 return (
   
     <div className="row">
     <div className="one column"></div>
       <h5>Sites</h5>
+      <div onClick={sortData}>Sort</div>
         <div className="four columns">
 
             {sites ? ( sites.map(site => (
@@ -60,11 +65,11 @@ return (
             site={site} 
             className="details" 
           />
-
+        <div className="row">
           <AssetListbySite 
             assetList={assetList} 
           />
-
+        </div>
         </div>  
     </div>
   )
