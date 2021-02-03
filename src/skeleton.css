@@ -33,7 +33,9 @@
     width: 80%; }
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-left: 1%;
+    margin-top: 0.5%;
+    border: 0px solid #222 }
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }
@@ -224,7 +226,8 @@ select {
 input[type="email"],
 input[type="number"],
 input[type="search"],
-input[type="text"],
+input[type="text"] {
+  width: 100%; }
 input[type="tel"],
 input[type="url"],
 input[type="password"],

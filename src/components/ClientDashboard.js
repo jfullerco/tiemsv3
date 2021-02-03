@@ -55,13 +55,12 @@ const ClientDashboard = () => {
   return (
     <div>  
           <div className="row">
-            <div className="one columns">
+            
+            <div className="two columns">
+              <h5>Client Dashboard</h5> 
               <Link to="/addClient">Add</Link>
             </div>
-          </div>
-
-            <div className="row"> 
-              
+                         
               <div className="two columns">
                 <input 
                   type="text"
@@ -78,11 +77,17 @@ const ClientDashboard = () => {
                   >
                   Search
                 </button>
+                
               </div>
-              <div className="5 columns"></div>
+
+              <div className="one column">
+                
+              </div>
+              <div className="five columns"></div>
             </div>
+
           <div>
-          <h2>Clients</h2> <p />
+           <p />
           <p />
             
               {clients && clients.map((client, index) => (
