@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {useParams} from react-router-dom
+import {useParams} from 'react-router-dom'
 import RestDBService from '../services/RestDBService'
 
 const AddClient = (props) => {
@@ -57,15 +57,34 @@ const newSite = () => {
 }
 
   return (
-    <div className="add-site-form">
+    <div className="row">
       {submitted ? (
         <div>
           <h3>Site Added</h3>
           <button onClick={newSite}>Add Another</button>
         </div>
       ) : (
-        <div className="form-group">
+        <div className="four columns">
           <label htmlFor="site_name">Site Name</label>
+        
+          <input
+            type="text"
+            className="form-control"
+            id="site_name"
+            value={site.site_name}
+            onChange={handleInputChange}
+            name="client_name"
+          />
+        <label htmlFor="site_add1">Address 1</label>
+          <input
+            type="text"
+            className="form-control"
+            id="site_name"
+            value={site.site_name}
+            onChange={handleInputChange}
+            name="client_name"
+          />
+        <label htmlFor="site_add2">Address 2</label>
           <input
             type="text"
             className="form-control"
@@ -75,6 +94,7 @@ const newSite = () => {
             name="client_name"
           />
         <button onClick={saveSite}>Add</button>
+        
         </div>
       )}
   </div>

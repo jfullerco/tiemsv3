@@ -21,9 +21,9 @@ const SiteDetail = (props) => {
 
 
   return (
-    <div>
+    <div className="four columns">
       {site ? (
-          <div>
+          
               <div className="detail">
                 <div className="detail-label">
                   Site Name:
@@ -43,15 +43,15 @@ const SiteDetail = (props) => {
                  {site._id}
                 </div>
               </div>
-              
-          </div>
-            
+
               ):(
+
                 <div className="detail">
                 <div className="detail-label">
                   Click Site for details
                 </div>
                 </div>
+
               )      
       }          
     </div>

@@ -26,52 +26,53 @@ function SiteList(props) {
     setSiteID(site._id)
     setAssetList(site.site_assets)
   }
-  const sortData = (sites) => {
-    setSortedSites(sites.sort(a => a.site_name ? 1 : -1))
-    console.log(sortedSites)
-  }
+  
 return (
-  
-    <div className="row">
-    <div className="one column"></div>
-      <h5>Sites</h5>
-      <div onClick={sortData}>Sort</div>
-        <div className="four columns">
-
-            {sites ? ( sites.map(site => (
-
-                      <div 
-                        className="site-list" 
-                        key={site._id} 
-                        onClick={() => handleChange(site)}
-                      >
-                          {site.site_name}
-              
-                          <div className="detail-label">
-                              ID: {site._id}
-                          </div>
-  
-                      </div>
-                    ))
-                  ):(
-                "No Sites"
-                  )
-            }
-          </div>
-
-        <div className="five columns">
-
-          <SiteDetail 
-            site={site} 
-            className="details" 
-          />
-        <div className="row">
-          <AssetListbySite 
-            assetList={assetList} 
-          />
+    <div>
+      <div className="row">
+        
+        <div className="two columns">
+          <h5>Sites</h5>
         </div>
-        </div>  
-    </div>
+      </div>
+        
+          <div className="four columns ">
+
+              {sites ? ( sites.map(site => (
+
+                        <div 
+                          className="site-list" 
+                          key={site._id} 
+                          onClick={() => handleChange(site)}
+                        >
+                            {site.site_name}
+                
+                            <div className="detail-label">
+                                ID: {site._id}
+                            </div>
+    
+                        </div>
+                      ))
+                    ):(
+                  "No Sites"
+                    )
+              }
+            </div>
+
+          <div className="four columns">
+
+            <SiteDetail 
+              site={site} 
+              className="details" 
+            />
+          <div className="row">
+            <AssetListbySite 
+              assetList={assetList} 
+            />
+          </div>
+          </div>  
+      </div>
+    
   )
 }
 export default SiteList

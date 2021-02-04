@@ -11,7 +11,7 @@ body {
 
 .navbar-link {
   padding: 5px;
-  padding-left: 15px;
+  
   grid-area: nav
 }
 
@@ -59,8 +59,8 @@ body {
 .detail {
   width: 300px;
   padding: 20px;
-  margin: 5px;
-  border: 1px 1px #ccc;
+  margin-bottom: 5px;
+  border: 1px #ccc;
   border-radius: 5px ;
   border-style: ridge;
   font-size: 1.2rem;

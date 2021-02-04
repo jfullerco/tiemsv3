@@ -53,7 +53,7 @@ const ClientDashboard = () => {
   }
   
   return (
-    <div>  
+        <div>  
           <div className="row">
             
             <div className="two columns">
@@ -61,14 +61,14 @@ const ClientDashboard = () => {
               <Link to="/addClient">Add</Link>
             </div>
                          
-              <div className="two columns">
-                <input 
-                  type="text"
-                  placeholder="client name"
-                  value={searchClient}
-                  onChange={onChangeSearchClient}
-                /> 
-              </div>
+            <div className="two columns">
+              <input 
+                type="text"
+                placeholder="client name"
+                value={searchClient}
+                onChange={onChangeSearchClient}
+              /> 
+            </div>
 
               <div className="two columns">
                 <button
@@ -80,27 +80,22 @@ const ClientDashboard = () => {
                 
               </div>
 
-              <div className="one column">
-                
-              </div>
               <div className="five columns"></div>
             </div>
 
-          <div>
-           <p />
-          <p />
-            
+            <div>
+              
               {clients && clients.map((client, index) => (
-                  <div className="client-list" key={client._id}>
+                <div className="client-list" key={client._id}>
                   <Link to={`/clients/${client._id}`}>
                     {client.client_name}
                     <br />
                   </Link>
-                  </div>
-                ))}
-              </div>
-           <div className="container"></div>
-    </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
   )
 }
 

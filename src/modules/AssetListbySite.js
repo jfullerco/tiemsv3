@@ -15,19 +15,27 @@ console.log(assetList)
 return (
   
     <div className="row">
-        {assetList ? (
+        
+          <table className="u-full-width offset-by-one column">
+            <thead>
+              <tr>Assets</tr>
+            </thead>
+            <tbody>
+              {assetList ? (
                 assetList.map(asset => (
-                  <div >
+                  <tr>
                     <Link to={`/assets/${asset._id}`} key="asset._id">
                       {asset.assetID} 
                     </Link>
-                  </div>
+                  </tr>
                 ))
+          
               ):(
             " "
               )
         }
-    
+          </tbody>
+          </table>
     </div>
 
   

@@ -7,6 +7,7 @@ import AddClient from './components/AddClient'
 import SiteCount from './modules/SiteCount'
 import SiteList from './modules/SiteList'
 import SiteDetail from './modules/SiteDetail'
+import AddSite from './components/AddSite'
 import AddAsset from './components/AddAsset'
 import UpdateAsClient from './admin/modules/UpdateAsClient'
 
@@ -24,7 +25,7 @@ function App() {
           
           <Route path="/client/:id/siteList" component={SiteList} />
           <Route path='/addAsset/:id' component={AddAsset} />
-
+          <Route path='/addSite/:id' component={AddSite} />
           <Route path='/admin/client/:id' component={UpdateAsClient} />
 
         </div>    

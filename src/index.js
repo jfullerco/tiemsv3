@@ -12,7 +12,11 @@ ReactDOM.render(
   <Router>
     <div className="container">
       <div className="row"><Navbar /></div>
-      <div className="row"><App /></div>
+      <div className="row">
+        <div className="1 column offset-by-one column">
+          <App />
+        </div>
+      </div>
     </div>
   </Router>, 
   document.getElementById("root"));

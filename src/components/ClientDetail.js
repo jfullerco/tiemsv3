@@ -28,7 +28,7 @@ return (
         </div>
         
       </div>
-    <div className="content">
+    <div>
       
       <h5>{client.client_name}</h5><br />
         <SiteList sites={sites} />
