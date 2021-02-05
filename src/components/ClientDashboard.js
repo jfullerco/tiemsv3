@@ -56,11 +56,13 @@ const ClientDashboard = () => {
         <div>  
           <div className="row">
             
-            <div className="two columns">
-              <h5>Client Dashboard</h5> 
-              <Link to="/addClient">Add</Link>
+            <div className="three columns">
+              <h5>Client Dashboard</h5>             
             </div>
-                         
+          </div>
+
+          <div className="row">               
+            
             <div className="two columns">
               <input 
                 type="text"
@@ -70,18 +72,23 @@ const ClientDashboard = () => {
               /> 
             </div>
 
-              <div className="two columns">
-                <button
-                  type="button"
-                  onClick={findClient}
-                  >
-                  Search
-                </button>
-                
-              </div>
-
-              <div className="five columns"></div>
+            <div className="two columns">              
+              <button
+                type="button"
+                onClick={findClient}
+                >
+                Search
+              </button>                
             </div>
+          </div>
+
+          <div className="row">
+            <div className="one column">
+              <Link to="/addClient">Add</Link>
+            </div>
+          </div>
+              
+            
 
             <div>
               

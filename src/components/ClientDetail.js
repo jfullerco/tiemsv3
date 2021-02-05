@@ -30,7 +30,6 @@ return (
       </div>
     <div>
       
-      <h5>{client.client_name}</h5><br />
         <SiteList sites={sites} />
         
       </div>
